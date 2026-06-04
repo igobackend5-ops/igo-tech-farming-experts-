@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono&family=Playfair+Display:ital,wght@0,700;0,900;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-primary: #16a34a;
+  --color-secondary: #0f766e;
+  --color-accent: #22c55e;
+}
+
+/* Base custom definitions */
+:root {
+  --primary: #16A34A;
+  --secondary: #0F766E;
+  --accent: #22C55E;
+  --dark: #0F172A;
+  --light: #F8FAFC;
+}
+
+/* Background gradient glows matching the Sleek Theme mockup */
+.bg-glow {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  background: radial-gradient(circle, rgba(22, 163, 74, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 9999px;
+  filter: blur(40px);
+  opacity: 0.85;
+}
+
+/* Sleek elegant components card matching the dashboard mockup design */
+.sleek-card {
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .sleek-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+}
+
+.light .sleek-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.04);
+}
+
+/* Sleek grid widgets */
+.sleek-widget {
+  border-radius: 16px;
+  padding: 16px;
+  transition: all 0.25s ease;
+}
+
+.dark .sleek-widget {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .sleek-widget {
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+/* Smooth active button updates */
+.btn-primary-sleek {
+  background: linear-gradient(135deg, #16A34A 0%, #0F766E 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 10px 25px rgba(22, 163, 74, 0.25);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary-sleek:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(22, 163, 74, 0.35);
+}
+
+.btn-outline-sleek {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+}
+
+.dark .btn-outline-sleek:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.light .btn-outline-sleek {
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.light .btn-outline-sleek:hover {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: rgba(15, 23, 42, 0.25);
+}
+
+/* Fluid clean animation effects */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom interactive ranges & scroll settings */
+input[type="range"]::-webkit-slider-thumb {
+  background: #22c55e;
+  border: 2px solid #ffffff;
+  border-radius: 9999px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Tech Farming Expert",
+  "description": "Where Precision Technology Meets the Indian Farmland - A premium enterprise Agritech SaaS platform powering AI Crop Advisory, IoT Field Sensors, and Market Linkage.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
