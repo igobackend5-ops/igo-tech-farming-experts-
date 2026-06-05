@@ -9,7 +9,6 @@ import { AppRoutes } from "../router";
 interface AppSettingsContextValue {
   isDarkMode: boolean;
   selectedLang: string;
-  toggleDarkMode: () => void;
   setSelectedLang: (value: string) => void;
 }
 
@@ -26,24 +25,19 @@ export function useAppSettings() {
 function AppShell() {
   const location = useLocation();
   const navigate = useNavigate();
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const isDarkMode = true;
   const [selectedLang, setSelectedLang] = useState("en");
 
   useEffect(() => {
     const root = window.document.documentElement;
     const body = window.document.body;
-    if (isDarkMode) {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    } else {
-      root.classList.remove("dark");
-      root.classList.add("light");
-    }
+    root.classList.add("dark");
+    root.classList.remove("light");
     root.style.backgroundColor = "transparent";
     root.style.backgroundImage = "none";
     body.style.backgroundColor = "transparent";
     body.style.backgroundImage = "none";
-  }, [isDarkMode]);
+  }, []);
 
   const currentPage = location.pathname === "/" ? "home" : location.pathname.replace("/", "");
 
@@ -53,11 +47,9 @@ function AppShell() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
-
   const value = useMemo(
-    () => ({ isDarkMode, selectedLang, toggleDarkMode, setSelectedLang }),
-    [isDarkMode, selectedLang]
+    () => ({ isDarkMode, selectedLang, setSelectedLang }),
+    [selectedLang]
   );
 
   return (
@@ -91,7 +83,6 @@ function AppShell() {
           currentPage={currentPage}
           onPageChange={handlePageChange}
           isDarkMode={isDarkMode}
-          onToggleDarkMode={toggleDarkMode}
           selectedLang={selectedLang}
           onLangChange={setSelectedLang}
         />

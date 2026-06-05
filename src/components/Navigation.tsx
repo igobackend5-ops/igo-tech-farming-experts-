@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Leaf, Menu, X, Globe, Moon, Sun, ArrowRight, MessageCircle } from "lucide-react";
+import { Leaf, Menu, X, Globe, ArrowRight, MessageCircle } from "lucide-react";
 
 interface NavigationProps {
   currentPage: string;
   onPageChange: (page: string) => void;
   isDarkMode: boolean;
-  onToggleDarkMode: () => void;
   selectedLang: string;
   onLangChange: (lang: string) => void;
 }
@@ -14,7 +13,6 @@ export default function Navigation({
   currentPage,
   onPageChange,
   isDarkMode,
-  onToggleDarkMode,
   selectedLang,
   onLangChange,
 }: NavigationProps) {
@@ -145,20 +143,6 @@ export default function Navigation({
               )}
             </div>
 
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={onToggleDarkMode}
-              className={`p-2 rounded-lg border transition-colors cursor-pointer ${
-                isDarkMode 
-                  ? "border-slate-800 bg-slate-950 hover:bg-slate-900 text-amber-400" 
-                  : "border-slate-200 bg-white hover:bg-slate-50 text-slate-600"
-              }`}
-              title="Toggle theme mode"
-              aria-label="Toggle theme mode"
-            >
-              {isDarkMode ? <Sun className="w-4.5 h-4.5" /> : <Moon className="w-4.5 h-4.5" />}
-            </button>
-
             {/* Premium CTA Button */}
             <button
               onClick={() => handleNavClick("contact")}
@@ -169,7 +153,7 @@ export default function Navigation({
             
           </div>
 
-          {/* Mobile Actions: Hamburguer and Mode toggle */}
+          {/* Mobile Actions */}
           <div className="flex lg:hidden items-center gap-2">
             
             {/* Quick Lang Select for Mobile */}
@@ -184,15 +168,6 @@ export default function Navigation({
               }`}
             >
               {selectedLang}
-            </button>
-
-            <button
-              onClick={onToggleDarkMode}
-              className={`p-2 rounded-lg border ${
-                isDarkMode ? "border-slate-800 text-amber-300 bg-slate-950" : "border-slate-200 text-slate-600 bg-white"
-              }`}
-            >
-              {isDarkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
 
             <button
