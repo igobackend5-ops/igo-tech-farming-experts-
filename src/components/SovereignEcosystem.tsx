@@ -501,54 +501,53 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
       style={{ marginLeft: "calc(50% - 50vw)", width: "100vw" }}
     >
       
-      {/* 1. HIGH FIDELITY BRAND GRAPHICS BACKGROUND WATERMARKS */}
+      {/* 1. HIGH FIDELITY BRAND GRAPHICS BACKGROUND WATERMARKS MATCHING SCREENSHOT */}
       <div className={`absolute inset-0 w-full h-full pointer-events-none select-none z-0 flex items-center justify-center overflow-hidden transition-opacity ${
-        isDarkMode ? "opacity-[0.06]" : "opacity-[0.05]"
+        isDarkMode ? "opacity-[0.2]" : "opacity-[0.3]"
       }`}>
-        <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-around gap-12 px-6">
-          {/* Left Watermark: India Map Outline + IGO Group text */}
-          <div className="relative w-72 h-44 flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 120 120" className="absolute inset-0 w-full h-full stroke-amber-600/60 stroke-[0.8] fill-none">
-              <path d="M45,15 Q49,12 50,15 T52,19 T56,22 T55,26 T53,30 T51,33 T54,34 T57,36 T58,40 T54,43 T53,48 T50,51 T48,56 T49,60 T48,64 T42,65 T38,62 T37,58 T38,53 T36,50 T39,45 T41,40 T38,36 T37,30 T39,26 T42,20 Z" />
-              <path d="M50,51 T55,54 T59,57 T62,60 T64,64 T65,68 T63,72 T59,75 T54,78 T51,82 T50,86 T48,89 T46,92 T45,95 L44,97 L43,95 T42,91 T41,86 T42,80 T40,75 T42,70 T44,65 T45,61 Z" />
-              <path d="M54,43 Q62,45 68,42 T74,40 T80,42 T85,45 T89,48 L91,50 T88,54 T83,57 T78,55 T72,52 T66,50 T60,51 Z" strokeDasharray="2 2" />
+        <div className="relative w-full max-w-5xl flex items-center justify-center h-full pt-16">
+          
+          {/* India Map Graphic (Golden Fill) */}
+          <div className="absolute left-[20%] sm:left-[30%] top-1/2 -translate-y-1/2 w-[350px] sm:w-[450px] opacity-80 mix-blend-multiply dark:mix-blend-screen">
+            <svg viewBox="0 0 120 120" className="w-full h-full drop-shadow-lg">
+              <defs>
+                <linearGradient id="indiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fef3c7" />
+                  <stop offset="50%" stopColor="#fcd34d" />
+                  <stop offset="100%" stopColor="#d97706" />
+                </linearGradient>
+              </defs>
+              <path 
+                d="M45,15 Q49,12 50,15 T52,19 T56,22 T55,26 T53,30 T51,33 T54,34 T57,36 T58,40 T54,43 T53,48 T50,51 T48,56 T49,60 T48,64 T42,65 T38,62 T37,58 T38,53 T36,50 T39,45 T41,40 T38,36 T37,30 T39,26 T42,20 Z" 
+                fill="url(#indiaGrad)" 
+                className="opacity-90"
+              />
+              <path 
+                d="M50,51 T55,54 T59,57 T62,60 T64,64 T65,68 T63,72 T59,75 T54,78 T51,82 T50,86 T48,89 T46,92 T45,95 L44,97 L43,95 T42,91 T41,86 T42,80 T40,75 T42,70 T44,65 T45,61 Z" 
+                fill="url(#indiaGrad)" 
+                className="opacity-70"
+              />
             </svg>
-            <div className="relative z-10 space-y-1">
-              <div className="text-2xl font-serif font-black text-amber-700 tracking-wider uppercase">IGO</div>
-              <div className="text-[7.5px] tracking-[0.25em] font-mono text-slate-600 font-extrabold uppercase">GROUP</div>
-              <div className="text-[5.5px] tracking-[0.18em] text-slate-500 font-sans font-bold uppercase whitespace-nowrap">India's Leading Farming Conglomerate</div>
+          </div>
+
+          {/* Large Typography Watermark */}
+          <div className="relative z-10 flex flex-col items-center justify-center text-center mix-blend-multiply dark:mix-blend-screen -mt-20">
+            <div className="text-[120px] sm:text-[180px] leading-[0.8] font-black text-slate-300/50 dark:text-slate-700/50 tracking-tighter uppercase font-sans">
+              IGO
+            </div>
+            <div className="relative">
+              <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] sm:text-[12px] font-black tracking-[0.4em] text-slate-400 uppercase whitespace-nowrap z-20">
+                INDIA GREEN ORGANICS
+              </div>
+              <div className="text-[70px] sm:text-[110px] leading-[0.8] font-black text-slate-300/50 dark:text-slate-700/50 tracking-tighter uppercase font-sans">
+                GROUP
+              </div>
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[8px] sm:text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase whitespace-nowrap z-20">
+                India's Leading Farming Conglomerate
+              </div>
             </div>
           </div>
 
-          {/* Center Watermark: Telemetry Radar Crop grid + India central circle */}
-          <div className="relative w-72 h-44 flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full stroke-emerald-600/40 stroke-[0.8] fill-none">
-              <circle cx="50" cy="50" r="40" strokeDasharray="3 3" />
-              <circle cx="50" cy="50" r="28" />
-              <circle cx="50" cy="50" r="14" strokeDasharray="1 1" />
-              <line x1="50" y1="5" x2="50" y2="95" strokeDasharray="2 2" />
-              <line x1="5" y1="50" x2="95" y2="50" strokeDasharray="2 2" />
-              <path d="M45,40 Q55,25 50,50 T45,40" fill="rgba(16,185,129,0.04)" />
-            </svg>
-            <div className="relative z-10 space-y-0.5">
-              <div className="text-3xl font-serif italic text-amber-700/90 tracking-widest font-black">IGO UP</div>
-              <div className="text-[7.5px] tracking-[0.22em] font-mono text-slate-600 font-black uppercase">GREEN ORGANICS</div>
-            </div>
-          </div>
-
-          {/* Right Watermark: Bio-Nutrients logo and leaf system */}
-          <div className="relative w-72 h-44 flex flex-col items-center justify-center text-center">
-            <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full stroke-amber-600/50 stroke-[0.8] fill-none">
-              <path d="M30,50 C30,35 45,30 50,45 C55,30 70,35 70,50 C70,65 55,70 50,55 C45,70 30,65 30,50 Z" />
-              <path d="M50,15 L50,85" strokeDasharray="2 2" />
-              <path d="M50,45 C55,40 60,42 62,48 C56,48 52,46 50,45 Z" fill="rgba(16,185,129,0.06)" stroke="rgba(16,185,129,0.3)" strokeWidth="0.5" />
-              <path d="M50,55 C45,60 40,58 38,52 C44,52 48,54 50,55 Z" fill="rgba(16,185,129,0.06)" stroke="rgba(16,185,129,0.3)" strokeWidth="0.5" />
-            </svg>
-            <div className="relative z-10 space-y-1">
-              <div className="text-xl font-serif font-black tracking-widest text-amber-700 uppercase">IGO GROUP</div>
-              <div className="text-[6.5px] tracking-[0.2em] font-mono text-slate-500 font-bold uppercase whitespace-nowrap">SOVEREIGN AGRICULTURAL CO.</div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -562,130 +561,21 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
         </div>
 
         {/* 3. HERO MAIN SECTION HEADING */}
-        <div className="space-y-4 max-w-3xl mx-auto rounded-3xl bg-black/10 p-6 shadow-lg shadow-black/10 backdrop-blur-sm dark:bg-black/15">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] dark:text-[#f8fafc]">
-            The <span className="font-serif italic font-normal text-[#F6D36A]">26 Verticals</span> of IGO.
+        <div className="space-y-4 max-w-4xl mx-auto relative z-10 py-2">
+          <h2 className={`text-4xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight leading-tight ${
+            isDarkMode ? "text-[#f8fafc]" : "text-[#0f172a]"
+          }`}>
+            The <span className="font-serif italic font-normal text-[#DAB247]">26 Verticals</span> of IGO.
           </h2>
-          <p className="text-xs sm:text-sm text-slate-100 font-sans leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.75)] dark:text-slate-100">
+          <p className={`text-sm sm:text-base font-sans font-medium leading-relaxed max-w-2xl mx-auto ${
+            isDarkMode ? "text-slate-300" : "text-slate-500"
+          }`}>
             A sovereign agricultural ecosystem covering Engineering, Production, Trade, and Consumer Lifestyle.
           </p>
-              {/* 4. ACTIVE PORTFOLIO BRAND SCROLLER / CAROUSEL PREVIEW MATCHING SCREENSHOT */}
-        <div className="brand-marquee-root relative py-6 overflow-hidden" id="brand-marquee-root">
-          <style>{`
-            @keyframes brand-scroll {
-              from { transform: translate3d(0, 0, 0); }
-              to { transform: translate3d(-50%, 0, 0); }
-            }
-            .brand-marquee-root {
-              width: 100vw;
-              max-width: none;
-              position: relative;
-              left: 50%;
-              transform: translateX(-50%);
-              margin-left: 0;
-              margin-right: 0;
-              padding-left: 0;
-              padding-right: 0;
-              overflow: hidden;
-            }
-            .brand-marquee-shell {
-              width: 100%;
-              max-width: none;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-              position: relative;
-            }
-            .brand-marquee-container {
-              display: flex;
-              width: max-content;
-              min-width: max-content;
-              will-change: transform;
-              animation: brand-scroll 28s linear infinite;
-              gap: 1.5rem;
-              padding: 0.5rem 0 1rem;
-              scrollbar-width: none;
-              -ms-overflow-style: none;
-            }
-            .brand-marquee-container::-webkit-scrollbar {
-              display: none;
-            }
-            .brand-marquee-container:hover {
-              animation-play-state: paused;
-            }
-            .brand-marquee-card {
-              flex: 0 0 auto;
-              width: min(88vw, 320px);
-            }
-            @media (min-width: 640px) {
-              .brand-marquee-card { width: 310px; }
-            }
-            @media (min-width: 1024px) {
-              .brand-marquee-card { width: 340px; }
-            }
-            @media (prefers-reduced-motion: reduce) {
-              .brand-marquee-container {
-                animation: none;
-              }
-            }
-          `}</style>
-
-          <div className="brand-marquee-shell">
-            <div
-              ref={scrollContainerRef}
-              className="brand-marquee-container select-none"
-              aria-label="IGO group showcase carousel"
-            >
-              {[...brandsList, ...brandsList].map((brand, idx) => (
-                <div 
-                  key={`${brand.id}-${idx}`}
-                  onClick={() => {
-                    // Clicking on any brand can open up its associated vertical stats directly!
-                    const matchedVertIndex = verticals.findIndex(v => v.name.toLowerCase().includes(brand.name.split(" ")[1]?.toLowerCase() || ""));
-                    if (matchedVertIndex !== -1) {
-                      setActiveIdx(matchedVertIndex);
-                    }
-                  }}
-                  className={`brand-marquee-card rounded-[2.5rem] p-7 transition-all duration-300 relative cursor-pointer flex flex-col justify-between h-[510px] text-left ${
-                    isDarkMode 
-                      ? "bg-white border border-slate-200/80 hover:border-amber-500/30 hover:translate-y-[-4px]" 
-                      : "bg-white border border-slate-200 hover:border-[#B48C35]/20 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:shadow-[0_12px_45px_rgba(180,140,53,0.08)] hover:translate-y-[-4px]"
-                  } ${brand.name === "PALM CAFE" ? "ring-2 ring-[#B48C35]/55 border-[#B48C35]/65" : ""}`}
-                >
-                  {/* Upper logo box */}
-                  <div className="w-full h-48 rounded-[2rem] flex items-center justify-center p-4 mb-5 border border-slate-200 bg-white relative overflow-hidden transition-colors shadow-sm">
-                    <div className="absolute top-[-30%] right-[-30%] w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
-                    {brand.logoComponent}
-                  </div>
-
-                  {/* Classification tag */}
-                  <div className="text-[10px] sm:text-[11.5px] tracking-[0.25em] font-sans font-extrabold text-[#B48C35] dark:text-[#C59B27] uppercase block mb-2">
-                    {brand.category}
-                  </div>
-
-                  {/* Brand title */}
-                  <h4 className="text-lg sm:text-xl font-sans font-black dark:text-white text-slate-800 tracking-tight leading-none mb-3">
-                    {brand.name}
-                  </h4>
-
-                  {/* Short Description */}
-                  <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed font-sans flex-grow">
-                    {brand.shortDesc}
-                  </p>
-
-                  {/* Bottom Active Division layout */}
-                  <div className="border-t border-slate-100 dark:border-slate-800/30 pt-4 mt-6 flex items-center justify-between text-[10px] uppercase font-mono font-black tracking-[0.18em] text-[#B48C35]/90">
-                    <span>Active Division</span>
-                    <ArrowRight className="w-4 h-4 text-[#B48C35] group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
-        {/* 5. INTERACTIVE CAROUSEL CONTROLS MATCHING SCREENSHOT EXACTLY */}
-        <div className="flex items-center justify-center gap-6 py-4" id="sovereign-carousel-controls">
+        {/* 5. INTERACTIVE CAROUSEL CONTROLS */}
+        <div className="flex items-center justify-center gap-6 pb-4 pt-4" id="sovereign-carousel-controls">
           <button 
             onClick={() => {
               if (scrollContainerRef.current) {
@@ -694,8 +584,8 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
             }}
             className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all cursor-pointer ${
               isDarkMode 
-                ? "border-slate-800 bg-slate-900/40 text-slate-400 hover:text-amber-500 hover:border-amber-500/40" 
-                : "border-slate-205 bg-white text-slate-500 hover:text-[#B48C35] hover:border-amber-500/40 shadow-sm hover:shadow"
+                ? "border-slate-700 bg-slate-900/40 text-slate-400 hover:text-amber-500 hover:border-amber-500/40" 
+                : "border-slate-200 bg-white text-slate-500 hover:text-[#B48C35] hover:border-amber-500/40 shadow-sm hover:shadow"
             }`}
             title="Scroll Left"
             id="verticals-carousel-prev"
@@ -705,10 +595,10 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
           
           <button 
             onClick={() => setIsExpanded(!isExpanded)}
-            className="uppercase font-sans tracking-[0.25em] font-extrabold text-[10px] sm:text-[11px] text-[#B48C35] hover:text-[#9A7420] dark:text-[#C59B27] dark:hover:text-[#DAB247] transition-all cursor-pointer select-none group flex flex-col items-center gap-1"
+            className="uppercase font-sans tracking-[0.25em] font-extrabold text-[10px] sm:text-[11px] text-slate-500 hover:text-[#9A7420] dark:text-slate-400 dark:hover:text-[#DAB247] transition-all cursor-pointer select-none group flex flex-col items-center gap-1"
             id="verticals-explore-btn"
           >
-            <span className="border-b border-dashed border-[#B48C35]/30 group-hover:border-b-solid transition-all pb-0.5">
+            <span className="border-b border-dashed border-slate-300 group-hover:border-b-solid transition-all pb-0.5">
               {isExpanded ? "COLLAPSE DIRECTORY" : "EXPLORE ALL 26 VERTICALS"}
             </span>
           </button>
@@ -721,8 +611,8 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
             }}
             className={`w-10 h-10 rounded-full border flex items-center justify-center transition-all cursor-pointer ${
               isDarkMode 
-                ? "border-slate-800 bg-slate-900/40 text-slate-400 hover:text-amber-500 hover:border-amber-500/40" 
-                : "border-slate-205 bg-white text-slate-500 hover:text-[#B48C35] hover:border-amber-500/40 shadow-sm hover:shadow"
+                ? "border-slate-700 bg-slate-900/40 text-slate-400 hover:text-amber-500 hover:border-amber-500/40" 
+                : "border-slate-200 bg-white text-slate-500 hover:text-[#B48C35] hover:border-amber-500/40 shadow-sm hover:shadow"
             }`}
             title="Scroll Right"
             id="verticals-carousel-next"
@@ -730,6 +620,87 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
             <ChevronRight className="w-4.5 h-4.5" />
           </button>
         </div>
+
+
+
+        {/* 4. ACTIVE PORTFOLIO BRAND SCROLLER / CAROUSEL PREVIEW MATCHING SCREENSHOT */}
+        <div className="brand-marquee-root relative py-8 overflow-hidden ticker-wrapper" id="brand-marquee-root">
+          <style>{`
+            @keyframes marquee {
+              from { transform: translateX(0); }
+              to { transform: translateX(-50%); }
+            }
+            .ticker-wrapper {
+              width: 100vw;
+              max-width: none;
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+              margin-left: 0;
+              margin-right: 0;
+              overflow: hidden;
+            }
+            .track {
+              display: flex;
+              width: max-content;
+              min-width: max-content;
+              will-change: transform;
+              animation: marquee 40s linear infinite;
+              gap: 1.5rem;
+              padding: 0.5rem 2rem 1rem;
+            }
+            .ticker-wrapper:hover .track {
+              animation-play-state: paused;
+            }
+            .brand-marquee-card {
+              flex-shrink: 0;
+              min-width: 180px;
+              width: 280px;
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .track {
+                animation: none;
+              }
+            }
+          `}</style>
+
+          <div className="brand-marquee-shell">
+            <div
+              ref={scrollContainerRef}
+              className="track select-none"
+              aria-label="IGO group showcase carousel"
+            >
+              {[...brandsList, ...brandsList].map((brand, idx) => (
+                <div 
+                  key={`${brand.id}-${idx}`}
+                  onClick={() => {
+                    // Clicking on any brand can open up its associated vertical stats directly!
+                    const matchedVertIndex = verticals.findIndex(v => v.name.toLowerCase().includes(brand.name.split(" ")[1]?.toLowerCase() || ""));
+                    if (matchedVertIndex !== -1) {
+                      setActiveIdx(matchedVertIndex);
+                    }
+                  }}
+                  className={`brand-marquee-card rounded-[2rem] p-6 transition-all duration-300 relative cursor-pointer flex flex-col justify-center items-center h-[280px] text-center ${
+                    isDarkMode 
+                      ? "bg-slate-800/50 border border-slate-700/80 hover:border-amber-500/30 hover:scale-105" 
+                      : "bg-[#F8F9FA] border border-slate-100 hover:border-slate-200 hover:shadow-md hover:scale-105"
+                  } ${brand.name === "PALM CAFE" ? "ring-2 ring-[#B48C35]/55 border-[#B48C35]/65" : ""}`}
+                >
+                  {/* Upper logo box */}
+                  <div className={`w-[140px] h-[140px] rounded-full flex items-center justify-center mb-8 relative overflow-hidden transition-colors shadow-sm border ${
+                    isDarkMode ? "bg-slate-900 border-slate-800" : "bg-white border-slate-100"
+                  }`}>
+                    {brand.logoComponent}
+                  </div>
+
+                  {/* Classification tag */}
+                  <div className="text-[11px] sm:text-[12px] tracking-[0.25em] font-sans font-bold text-slate-400 dark:text-slate-500 uppercase block">
+                    {brand.category}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* 6. EXPANDED MATRIX GRID - SHOWS CLASSIFIED VERTICALS BENTO */}
