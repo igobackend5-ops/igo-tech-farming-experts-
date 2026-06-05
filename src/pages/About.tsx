@@ -18,7 +18,7 @@ export default function About({ isDarkMode }: AboutProps) {
   ];
 
   return (
-    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-800"}`} id="about-page-wrap">
+    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "text-slate-100" : "text-slate-800"}`} id="about-page-wrap">
       
       {/* 1. HEADER */}
       <section className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-4">
@@ -38,8 +38,8 @@ export default function About({ isDarkMode }: AboutProps) {
 
       {/* 2. CHAIRMEN PROFILE SPOTLIGHT */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`p-8 rounded-2xl border ${
-          isDarkMode ? "bg-slate-900 border-slate-850" : "bg-white border-slate-200 shadow-lg"
+        <div className={`p-8 rounded-2xl border backdrop-blur-md ${
+          isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50 shadow-lg"
         }`}>
           
           <div className="grid lg:grid-cols-12 gap-10 items-center text-left">
@@ -90,8 +90,8 @@ export default function About({ isDarkMode }: AboutProps) {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-6 text-left">
           
-          <div className={`p-6 rounded-xl border ${
-            isDarkMode ? "bg-slate-900/40 border-slate-850" : "bg-white border-slate-200/80"
+          <div className={`p-6 rounded-xl border backdrop-blur-md ${
+            isDarkMode ? "bg-slate-900/30 border-slate-800/60" : "bg-white/40 border-slate-200/50"
           }`}>
             <Target className="w-8 h-8 text-emerald-500 mb-3" />
             <h3 className="font-bold text-base text-white mb-2" style={{ color: !isDarkMode ? "#0F172A" : "white" }}>Our Mission</h3>
@@ -100,8 +100,8 @@ export default function About({ isDarkMode }: AboutProps) {
             </p>
           </div>
 
-          <div className={`p-6 rounded-xl border ${
-            isDarkMode ? "bg-slate-900/40 border-slate-850" : "bg-white border-slate-200/80"
+          <div className={`p-6 rounded-xl border backdrop-blur-md ${
+            isDarkMode ? "bg-slate-900/30 border-slate-800/60" : "bg-white/40 border-slate-200/50"
           }`}>
             <Eye className="w-8 h-8 text-cyan-400 mb-3" />
             <h3 className="font-bold text-base text-white mb-2" style={{ color: !isDarkMode ? "#0F172A" : "white" }}>Our Vision</h3>
@@ -110,8 +110,8 @@ export default function About({ isDarkMode }: AboutProps) {
             </p>
           </div>
 
-          <div className={`p-6 rounded-xl border ${
-            isDarkMode ? "bg-slate-900/40 border-slate-850" : "bg-white border-slate-200/80"
+          <div className={`p-6 rounded-xl border backdrop-blur-md ${
+            isDarkMode ? "bg-slate-900/30 border-slate-800/60" : "bg-white/40 border-slate-200/50"
           }`}>
             <Handshake className="w-8 h-8 text-emerald-500 mb-3" />
             <h3 className="font-bold text-base text-white mb-2" style={{ color: !isDarkMode ? "#0F172A" : "white" }}>Our Values</h3>
@@ -146,8 +146,8 @@ export default function About({ isDarkMode }: AboutProps) {
               <div className={`w-full sm:w-1/2 pl-10 sm:pl-0 ${
                 idx % 2 === 0 ? "sm:pr-10 sm:text-right" : "sm:pl-10"
               }`}>
-                <div className={`p-5 rounded-xl border ${
-                  isDarkMode ? "bg-slate-900/60 border-slate-850" : "bg-white border-slate-200 shadow-2xs"
+                <div className={`p-5 rounded-xl border backdrop-blur-md ${
+                  isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50 shadow-2xs"
                 }`}>
                   <span className="text-xs font-black text-emerald-500 tracking-wider block mb-1">{mil.year}</span>
                   <h4 className="font-bold text-sm text-white" style={{ color: !isDarkMode ? "#0F172A" : "white" }}>{mil.title}</h4>

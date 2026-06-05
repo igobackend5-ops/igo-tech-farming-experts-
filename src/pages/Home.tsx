@@ -47,11 +47,11 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
   }, [tickerItems.length]);
 
   return (
-    <div className={`space-y-24 pb-20 ${isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-800"}`} id="home-view-container">
+    <div className={`space-y-24 pb-20 ${isDarkMode ? "text-slate-100" : "text-slate-800"}`} id="home-view-container">
       
       {/* 1. TOP DYNAMIC PROCUREMENT TICKER */}
-      <div className={`py-2.5 px-4 font-mono text-[11px] font-bold border-b transition-colors ${
-        isDarkMode ? "bg-slate-900 border-slate-800" : "bg-slate-100 border-slate-200"
+      <div className={`py-2.5 px-4 font-mono text-[11px] font-bold border-b transition-colors backdrop-blur-md ${
+        isDarkMode ? "bg-slate-900/50 border-slate-800/60" : "bg-white/40 border-slate-200/50"
       }`}>
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2.5">
           <div className="flex items-center gap-2">
@@ -85,8 +85,8 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
           {/* Left Hero Texts */}
           <div className="lg:col-span-6 space-y-6 text-left">
             
-            <div className={`inline-flex items-center gap-2 p-1.5 pr-3 rounded-full border text-[11px] font-extrabold uppercase tracking-wider ${
-              isDarkMode ? "bg-slate-900 border-slate-800 text-slate-200" : "bg-white border-slate-200 text-slate-700 shadow-sm"
+            <div className={`inline-flex items-center gap-2 p-1.5 pr-3 rounded-full border text-[11px] font-extrabold uppercase tracking-wider backdrop-blur-md ${
+              isDarkMode ? "bg-slate-900/50 border-slate-800/60 text-slate-200" : "bg-white/50 border-slate-200/50 text-slate-700 shadow-sm"
             }`}>
               <span className="bg-emerald-600 text-white rounded-full px-2 py-0.5 font-sans font-black">
                 NEW
@@ -117,10 +117,10 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
               
               <button
                 onClick={() => setIsDemoPlaying(!isDemoPlaying)}
-                className={`px-6 py-3 border rounded-xl font-bold text-xs tracking-wider uppercase transition-all cursor-pointer flex items-center gap-2 ${
+                className={`px-6 py-3 border rounded-xl font-bold text-xs tracking-wider uppercase transition-all cursor-pointer flex items-center gap-2 backdrop-blur-sm ${
                   isDarkMode 
-                    ? "border-slate-800 bg-slate-900 hover:bg-slate-800 text-white" 
-                    : "border-slate-200 bg-white hover:bg-slate-50 text-slate-700 shadow-sm"
+                    ? "border-slate-800/60 bg-slate-900/40 hover:bg-slate-800/60 text-white" 
+                    : "border-slate-200/50 bg-white/40 hover:bg-white/60 text-slate-700 shadow-sm"
                 }`}
               >
                 <Play className={`w-3.5 h-3.5 ${isDemoPlaying ? "animate-pulse text-emerald-400" : ""}`} />
@@ -261,8 +261,8 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
       </section>
 
       {/* 3. ENTERPRISE COUNTER STATS SECTION */}
-      <section className={`py-12 border-y transition-colors ${
-        isDarkMode ? "bg-slate-900/40 border-slate-900" : "bg-slate-100 border-slate-200"
+      <section className={`py-12 border-y transition-colors backdrop-blur-md ${
+        isDarkMode ? "bg-slate-900/30 border-slate-800/50" : "bg-white/30 border-slate-200/50"
       }`} id="enterprise-counters-bar">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -320,10 +320,10 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
           {["NABARD Compliant", "ICAR Certified Partnership", "Startup India Registered", "FPO Network Endorsed", "SBI Kisan Link Compatibility", "Agricultural Universities Board"].map((item, index) => (
             <div 
               key={index} 
-              className={`px-4 py-2 text-xs font-serif italic border rounded-lg uppercase tracking-wider font-extrabold select-none ${
+              className={`px-4 py-2 text-xs font-serif italic border rounded-lg uppercase tracking-wider font-extrabold select-none backdrop-blur-sm ${
                 isDarkMode 
-                  ? "border-slate-800 bg-slate-900/30 text-slate-400" 
-                  : "border-slate-200 bg-white text-slate-500 shadow-xs"
+                  ? "border-slate-800/60 bg-slate-900/30 text-slate-400" 
+                  : "border-slate-200/50 bg-white/40 text-slate-500 shadow-xs"
               }`}
             >
               {item}
@@ -388,10 +388,10 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
             <div 
               key={idx}
               onClick={() => onPageChange(service.slug)}
-              className={`p-6 rounded-xl border group hover:border-emerald-500/50 transition-all cursor-pointer ${
+              className={`p-6 rounded-xl border group hover:border-emerald-500/50 transition-all cursor-pointer backdrop-blur-md ${
                 isDarkMode 
-                  ? "bg-slate-900/50 border-slate-800" 
-                  : "bg-white border-slate-200/80 shadow-xs"
+                  ? "bg-slate-900/40 border-slate-800/60" 
+                  : "bg-white/40 border-slate-200/50 shadow-xs"
               }`}
             >
               <div className="flex justify-between items-start mb-4">
@@ -479,8 +479,8 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
 
           {/* Satellite Interactive Field Heatmap Canvas Grid */}
           <div className="lg:col-span-7">
-            <div className={`p-6 rounded-2xl border ${
-              isDarkMode ? "bg-slate-900 border-slate-800" : "bg-white border-slate-200 shadow-lg"
+            <div className={`p-6 rounded-2xl border backdrop-blur-md ${
+              isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50 shadow-lg"
             }`}>
               <div className="flex justify-between items-center mb-4 text-xs">
                 <div className="flex items-center gap-1.5 font-bold text-slate-300">
@@ -517,8 +517,8 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
               </div>
 
               {/* Detail view of active index choice */}
-              <div className={`mt-4 p-4 rounded-xl text-xs text-left ${
-                isDarkMode ? "bg-slate-950 border border-slate-800" : "bg-slate-50 border border-slate-200"
+              <div className={`mt-4 p-4 rounded-xl text-xs text-left backdrop-blur-sm ${
+                isDarkMode ? "bg-slate-950/50 border border-slate-800/60" : "bg-white/40 border border-slate-200/50"
               }`}>
                 {activeNdviCell !== null ? (
                   <div className="space-y-1.5 animate-fadeIn">
@@ -594,8 +594,8 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
           ].map((story, idx) => (
             <div 
               key={idx}
-              className={`p-6 rounded-xl border relative shadow-sm ${
-                isDarkMode ? "bg-slate-900 border-slate-800" : "bg-white border-slate-200"
+              className={`p-6 rounded-xl border relative shadow-sm backdrop-blur-md ${
+                isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50"
               }`}
             >
               <p className="text-xs italic leading-relaxed text-slate-300" style={{ color: !isDarkMode ? "#334155" : "" }}>
@@ -619,7 +619,13 @@ export default function Home({ onPageChange, isDarkMode, selectedLang }: HomePro
 
       {/* 10. PREMIUM CALL TO ACTION BLOCK */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="home-cta-banner">
-        <div className="bg-gradient-to-r from-emerald-950 to-emerald-900 border border-emerald-500/30 rounded-3xl p-8 sm:p-12 text-center space-y-6 relative overflow-hidden">
+        <div
+          className="rounded-3xl border border-emerald-500/30 p-8 text-center shadow-2xl sm:p-12 relative overflow-hidden"
+          style={{
+            backgroundImage:
+              "linear-gradient(135deg, rgba(2, 6, 23, 0.95), rgba(15, 23, 42, 0.85))"
+          }}
+        >
           {/* subtle pattern */}
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 

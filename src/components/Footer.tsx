@@ -15,10 +15,10 @@ export default function Footer({ onPageChange, isDarkMode }: FooterProps) {
   };
 
   return (
-    <footer className={`border-t transition-all pt-16 pb-8 ${
+    <footer className={`border-t transition-all pt-16 pb-8 backdrop-blur-md ${
       isDarkMode 
-        ? "bg-[#0f172a]/95 border-slate-800 text-slate-300" 
-        : "bg-slate-50 border-slate-200 text-slate-600"
+        ? "bg-[#0f172a]/50 border-slate-800/50 text-slate-300" 
+        : "bg-white/40 border-slate-200/50 text-slate-600"
     }`} id="corporate-footer-root">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -157,7 +157,7 @@ export default function Footer({ onPageChange, isDarkMode }: FooterProps) {
 
         {/* Middle trust badges row showing alignment with ICAR/NABARD */}
         <div className={`py-6 border-y flex flex-wrap gap-6 items-center justify-between text-xs font-semibold ${
-          isDarkMode ? "border-slate-900 bg-slate-950/40" : "border-slate-200 bg-slate-100/40"
+          isDarkMode ? "border-slate-800/50 bg-slate-950/30" : "border-slate-200/50 bg-white/30"
         }`}>
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-500" />

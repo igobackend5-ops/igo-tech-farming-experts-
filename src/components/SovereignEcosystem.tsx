@@ -145,62 +145,30 @@ const IgoCargoLogo = () => (
 );
 
 const brandsList = [
-  {
-    id: "brand-1",
-    name: "IGO AGRI MART",
-    category: "DISTRIBUTION",
-    shortDesc: "Farm inputs and distribution network — connecting quality agricultural inputs directly to farmers across India.",
-    logoComponent: <IgoAgriMartLogo />
-  },
-  {
-    id: "brand-2",
-    name: "IGO NURSERY",
-    category: "PLANT PROPAGATION",
-    shortDesc: "Premium nursery and landscaping solutions — supplying quality plants, seeds and horticultural products pan-India.",
-    logoComponent: <IgoNurseryLogo />
-  },
-  {
-    id: "brand-3",
-    name: "PALM CAFE",
-    category: "F & B",
-    shortDesc: "The Healthy Food Joint — farm-to-table F&B brand creating 5,000 jobs for youth using IGO's own farm produce.",
-    logoComponent: <PalmCafeLogo />
-  },
-  {
-    id: "brand-4",
-    name: "IGO EXPORTS & IMPORTS",
-    category: "TRADE",
-    shortDesc: "International trade division connecting Indian agri products to global markets and bringing world-class inputs to India.",
-    logoComponent: <IgoExportsImportsLogo />
-  },
-  {
-    id: "brand-5",
-    name: "IGO ORGANICS",
-    category: "CONSUMER STAPLES",
-    shortDesc: "Clean chemical-free pulses, direct-harvest spices, and organic cold-pressed oils certified under non-toxic guidelines.",
-    logoComponent: <IgoOrganicsLogo />
-  },
-  {
-    id: "brand-6",
-    name: "IGO DRONEWORKS",
-    category: "AEROTECH",
-    shortDesc: "Autonomous heavy-payload crop protection rotary-wing fleets delivering precision micro-sprays to field coordinates.",
-    logoComponent: <IgoDroneWorksLogo />
-  },
-  {
-    id: "brand-7",
-    name: "IGO GREEN DAIRY",
-    category: "BIO DAIRY",
-    shortDesc: "Traceable ethical dairy cooperatives equipped with real-time biometric ear tags monitoring cattle feed and yield health.",
-    logoComponent: <IgoGreenDairyLogo />
-  },
-  {
-    id: "brand-8",
-    name: "IGO CARGO",
-    category: "LOGISTICS",
-    shortDesc: "Advanced cold-chain reefer fleets with integrated ambient IoT monitoring keeping fresh crops safe in trans-shipments.",
-    logoComponent: <IgoCargoLogo />
-  }
+  { id: "brand-1", name: "Farm Automation", category: "Technology", shortDesc: "Smart automation systems for modern farming operations.", logoComponent: <img src="/images/2.jpg" alt="Farm Automation logo" className="h-full w-full object-contain" /> },
+  { id: "brand-2", name: "IGO Agri Estates", category: "Real Estate", shortDesc: "Integrated agri-estate and land development initiatives.", logoComponent: <img src="/images/3.jpg" alt="IGO Agri Estates logo" className="h-full w-full object-contain" /> },
+  { id: "brand-3", name: "IGO Cosmetics", category: "Consumer", shortDesc: "Natural and wellness-driven cosmetic products.", logoComponent: <img src="/images/3.jpg" alt="IGO Cosmetics logo" className="h-full w-full object-contain" /> },
+  { id: "brand-4", name: "Billionism Monk", category: "Brand", shortDesc: "A modern brand identity under the IGO ecosystem.", logoComponent: <img src="/images/5.jpg" alt="Billionism Monk logo" className="h-full w-full object-contain" /> },
+  { id: "brand-5", name: "IGO Agrimart", category: "Retail", shortDesc: "Farm retail and input marketplace for rural and urban demand.", logoComponent: <img src="/images/6.jpg" alt="IGO Agrimart logo" className="h-full w-full object-contain" /> },
+  { id: "brand-6", name: "Valluvam", category: "Food", shortDesc: "Regional food brand focused on freshness and local values.", logoComponent: <img src="/images/7.jpg" alt="Valluvam logo" className="h-full w-full object-contain" /> },
+  { id: "brand-7", name: "IGO Agri Techfarms", category: "AgriTech", shortDesc: "Technology-led farm operations and agri innovation platform.", logoComponent: <img src="/images/8.jpg" alt="IGO Agri Techfarms logo" className="h-full w-full object-contain" /> },
+  { id: "brand-8", name: "Tech Farming Expert", category: "Consulting", shortDesc: "Precision agronomy advisory and farm intelligence services.", logoComponent: <img src="/images/9.jpg" alt="Tech Farming Expert logo" className="h-full w-full object-contain" /> },
+  { id: "brand-9", name: "Protein Cuts", category: "Nutrition", shortDesc: "Protein-rich food products and health-focused nutrition.", logoComponent: <img src="/images/10.jpg" alt="Protein Cuts logo" className="h-full w-full object-contain" /> },
+  { id: "brand-10", name: "IGO Exports & Imports", category: "Trade", shortDesc: "International trade and supply chain for agri products.", logoComponent: <img src="/images/11.jpg" alt="IGO Exports & Imports logo" className="h-full w-full object-contain" /> },
+  { id: "brand-11", name: "Palmcafe", category: "Food & Beverage", shortDesc: "Healthy food joint and farm-to-table dining experience.", logoComponent: <img src="/images/12.jpg" alt="Palmcafe logo" className="h-full w-full object-contain" /> },
+  { id: "brand-12", name: "IGO Academy", category: "Education", shortDesc: "Training and capacity-building platform for farming communities.", logoComponent: <img src="/images/13.jpg" alt="IGO Academy logo" className="h-full w-full object-contain" /> },
+  { id: "brand-13", name: "IGO Nursery", category: "Horticulture", shortDesc: "Nursery propagation and green plant solutions.", logoComponent: <img src="/images/14.jpg" alt="IGO Nursery logo" className="h-full w-full object-contain" /> },
+  { id: "brand-14", name: "IGO Mart", category: "Marketplace", shortDesc: "Integrated retail and service marketplace for rural needs.", logoComponent: <img src="/images/15.jpg" alt="IGO Mart logo" className="h-full w-full object-contain" /> },
+  { id: "brand-15", name: "Farm Loans & Subsidy", category: "Finance", shortDesc: "Financial support and subsidy guidance for farmers.", logoComponent: <img src="/images/16.jpg" alt="Farm Loans & Subsidy logo" className="h-full w-full object-contain" /> },
+  { id: "brand-16", name: "IGO Financial Services", category: "Finance", shortDesc: "Digital finance and agri financing solutions.", logoComponent: <img src="/images/17.jpg" alt="IGO Financial Services logo" className="h-full w-full object-contain" /> },
+  { id: "brand-17", name: "IGO Franchise", category: "Business", shortDesc: "Franchise model for scalable agri and retail expansion.", logoComponent: <img src="/images/18.jpg" alt="IGO Franchise logo" className="h-full w-full object-contain" /> },
+  { id: "brand-18", name: "Farm Factories", category: "Production", shortDesc: "Production units aligned with farm-based manufacturing.", logoComponent: <img src="/images/19.jpg" alt="Farm Factories logo" className="h-full w-full object-contain" /> },
+  { id: "brand-19", name: "Farmers Factory", category: "Production", shortDesc: "Community-led production and processing brand.", logoComponent: <img src="/images/20.jpg" alt="Farmers Factory logo" className="h-full w-full object-contain" /> },
+  { id: "brand-20", name: "IGO Crop Care", category: "Agronomy", shortDesc: "Crop protection and plant health solutions.", logoComponent: <img src="/images/21.jpg" alt="IGO Crop Care logo" className="h-full w-full object-contain" /> },
+  { id: "brand-21", name: "IGO Pharma", category: "Healthcare", shortDesc: "Agri-health and pharma-linked wellness products.", logoComponent: <img src="/images/22.jpg" alt="IGO Pharma logo" className="h-full w-full object-contain" /> },
+  { id: "brand-22", name: "IGO Techfarming Scientist", category: "Research", shortDesc: "Research-led scientific approach to modern farming.", logoComponent: <img src="/images/23.jpg" alt="IGO Techfarming Scientist logo" className="h-full w-full object-contain" /> },
+  { id: "brand-23", name: "Farmgate Mandi", category: "Marketplace", shortDesc: "Direct market linkages and mandi-focused trading solutions.", logoComponent: <img src="/images/24.jpg" alt="Farmgate Mandi logo" className="h-full w-full object-contain" /> },
+  { id: "brand-24", name: "IGO Wealth Management", category: "Finance", shortDesc: "Wealth and financial planning services for agri stakeholders.", logoComponent: <img src="/images/25.jpg" alt="IGO Wealth Management logo" className="h-full w-full object-contain" /> }
 ];
 
 // Types for the Verticals list
@@ -523,13 +491,14 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
   const categories = ["All", "Engineering", "Production", "Trade", "Consumer Lifestyle"];
 
   return (
-    <div 
-      className={`relative py-24 border-t transition-all duration-300 overflow-hidden ${
+    <section 
+      className={`relative w-screen overflow-hidden border-t transition-all duration-300 ${
         isDarkMode 
           ? "bg-[#090d16] border-slate-800/80 text-[#f8fafc]" 
           : "bg-[#FCFBF7] border-slate-200/80 text-[#0f172a]"
       }`} 
       id="sovereign-ecosystem-display-root"
+      style={{ marginLeft: "calc(50% - 50vw)", width: "100vw" }}
     >
       
       {/* 1. HIGH FIDELITY BRAND GRAPHICS BACKGROUND WATERMARKS */}
@@ -583,7 +552,7 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 text-center">
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 text-center">
         
         {/* 2. SUB-LABEL WITH SIDE RULES */}
         <div className="flex items-center justify-center gap-4 text-[10px] sm:text-[11px] tracking-[0.25em] font-bold text-amber-600/90 dark:text-amber-500 uppercase font-mono">
@@ -593,52 +562,80 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
         </div>
 
         {/* 3. HERO MAIN SECTION HEADING */}
-        <div className="space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight leading-tight text-slate-900 dark:text-[#f8fafc]">
-            The <span className="font-serif italic font-normal text-[#C59B27]">26 Verticals</span> of IGO.
+        <div className="space-y-4 max-w-3xl mx-auto rounded-3xl bg-black/10 p-6 shadow-lg shadow-black/10 backdrop-blur-sm dark:bg-black/15">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight leading-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)] dark:text-[#f8fafc]">
+            The <span className="font-serif italic font-normal text-[#F6D36A]">26 Verticals</span> of IGO.
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-sans leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-100 font-sans leading-relaxed max-w-2xl mx-auto drop-shadow-[0_1px_4px_rgba(0,0,0,0.75)] dark:text-slate-100">
             A sovereign agricultural ecosystem covering Engineering, Production, Trade, and Consumer Lifestyle.
           </p>
               {/* 4. ACTIVE PORTFOLIO BRAND SCROLLER / CAROUSEL PREVIEW MATCHING SCREENSHOT */}
-        <div className="relative py-6 overflow-hidden w-full max-w-7xl mx-auto" id="brand-marquee-root">
+        <div className="brand-marquee-root relative py-6 overflow-hidden" id="brand-marquee-root">
           <style>{`
             @keyframes brand-scroll {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
+              from { transform: translate3d(0, 0, 0); }
+              to { transform: translate3d(-50%, 0, 0); }
+            }
+            .brand-marquee-root {
+              width: 100vw;
+              max-width: none;
+              position: relative;
+              left: 50%;
+              transform: translateX(-50%);
+              margin-left: 0;
+              margin-right: 0;
+              padding-left: 0;
+              padding-right: 0;
+              overflow: hidden;
+            }
+            .brand-marquee-shell {
+              width: 100%;
+              max-width: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              position: relative;
             }
             .brand-marquee-container {
               display: flex;
-              overflow-x: auto;
-              scroll-behavior: smooth;
-              scrollbar-width: none; /* Firefox */
-              -ms-overflow-style: none;  /* IE 10+ */
+              width: max-content;
+              min-width: max-content;
+              will-change: transform;
+              animation: brand-scroll 28s linear infinite;
+              gap: 1.5rem;
+              padding: 0.5rem 0 1rem;
+              scrollbar-width: none;
+              -ms-overflow-style: none;
             }
             .brand-marquee-container::-webkit-scrollbar {
-              display: none; /* Safari and Chrome */
+              display: none;
             }
-            .brand-marquee-inner {
-              display: flex;
-              gap: 1.5rem;
-              width: max-content;
-              animation: brand-scroll 45s linear infinite;
-            }
-            .brand-marquee-inner:hover {
+            .brand-marquee-container:hover {
               animation-play-state: paused;
             }
-            @media (max-width: 640px) {
-              .brand-marquee-inner {
-                animation: none; /* Allow pure swipe on mobile safely */
+            .brand-marquee-card {
+              flex: 0 0 auto;
+              width: min(88vw, 320px);
+            }
+            @media (min-width: 640px) {
+              .brand-marquee-card { width: 310px; }
+            }
+            @media (min-width: 1024px) {
+              .brand-marquee-card { width: 340px; }
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .brand-marquee-container {
+                animation: none;
               }
             }
           `}</style>
 
-          {/* Manual navigation triggers around the marquee container */}
-          <div 
-            ref={scrollContainerRef}
-            className="brand-marquee-container flex gap-6 px-4 py-8 overflow-x-auto select-none"
-          >
-            <div className="brand-marquee-inner">
+          <div className="brand-marquee-shell">
+            <div
+              ref={scrollContainerRef}
+              className="brand-marquee-container select-none"
+              aria-label="IGO group showcase carousel"
+            >
               {[...brandsList, ...brandsList].map((brand, idx) => (
                 <div 
                   key={`${brand.id}-${idx}`}
@@ -649,18 +646,14 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
                       setActiveIdx(matchedVertIndex);
                     }
                   }}
-                  className={`flex-shrink-0 w-[290px] sm:w-[325px] rounded-[2.5rem] p-7 transition-all duration-300 relative cursor-pointer flex flex-col justify-between h-[510px] text-left ${
+                  className={`brand-marquee-card rounded-[2.5rem] p-7 transition-all duration-300 relative cursor-pointer flex flex-col justify-between h-[510px] text-left ${
                     isDarkMode 
-                      ? "bg-[#111827] border border-slate-800/80 hover:border-amber-500/30 hover:translate-y-[-4px]" 
-                      : "bg-white border border-slate-100 hover:border-[#B48C35]/20 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:shadow-[0_12px_45px_rgba(180,140,53,0.08)] hover:translate-y-[-4px]"
+                      ? "bg-white border border-slate-200/80 hover:border-amber-500/30 hover:translate-y-[-4px]" 
+                      : "bg-white border border-slate-200 hover:border-[#B48C35]/20 shadow-[0_12px_42px_rgba(0,0,0,0.035)] hover:shadow-[0_12px_45px_rgba(180,140,53,0.08)] hover:translate-y-[-4px]"
                   } ${brand.name === "PALM CAFE" ? "ring-2 ring-[#B48C35]/55 border-[#B48C35]/65" : ""}`}
                 >
                   {/* Upper logo box */}
-                  <div className={`w-full h-48 rounded-[2rem] flex items-center justify-center p-4 mb-5 border relative overflow-hidden transition-colors ${
-                    isDarkMode 
-                      ? "bg-[#1a2333] border-slate-800/60" 
-                      : "bg-[#FCFBF7] border-[#f4f2ea]"
-                  }`}>
+                  <div className="w-full h-48 rounded-[2rem] flex items-center justify-center p-4 mb-5 border border-slate-200 bg-white relative overflow-hidden transition-colors shadow-sm">
                     <div className="absolute top-[-30%] right-[-30%] w-24 h-24 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
                     {brand.logoComponent}
                   </div>
@@ -737,7 +730,7 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
             <ChevronRight className="w-4.5 h-4.5" />
           </button>
         </div>
-    </div>
+        </div>
 
         {/* 6. EXPANDED MATRIX GRID - SHOWS CLASSIFIED VERTICALS BENTO */}
         <AnimatePresence>
@@ -747,7 +740,7 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="overflow-hidden max-w-6xl mx-auto pt-6 text-left"
+              className="overflow-visible w-full pt-6 text-left"
               id="verticals-expanded-catalog-panel"
             >
               {/* Category Filter Pills */}
@@ -829,6 +822,6 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
         </AnimatePresence>
 
       </div>
-    </div>
+    </section>
   );
 }

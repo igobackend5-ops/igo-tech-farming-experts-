@@ -60,7 +60,7 @@ export default function Community({ isDarkMode, onPageChange }: CommunityProps) 
   };
 
   return (
-    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-800"}`} id="community-page-wrap">
+    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "text-slate-100" : "text-slate-800"}`} id="community-page-wrap">
       
       {/* 1. HEADER */}
       <section className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-4">
@@ -77,8 +77,8 @@ export default function Community({ isDarkMode, onPageChange }: CommunityProps) 
 
       {/* 2. SUCCESS STORIES CAROUSEL WIDGET */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`p-8 rounded-2xl border ${
-          isDarkMode ? "bg-slate-900 border-slate-800" : "bg-white border-slate-200 shadow-lg"
+        <div className={`p-8 rounded-2xl border backdrop-blur-md ${
+          isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50 shadow-lg"
         }`}>
           
           <div className="grid lg:grid-cols-12 gap-8 items-center text-left">
@@ -134,7 +134,7 @@ export default function Community({ isDarkMode, onPageChange }: CommunityProps) 
             </div>
 
             {/* Right block: FPO program overview */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-slate-950 to-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-2xl">
+            <div className="lg:col-span-5 bg-gradient-to-br from-slate-950/60 to-slate-900/50 border border-slate-800/60 p-6 rounded-2xl space-y-4 shadow-2xl backdrop-blur-md">
               <span className="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider block">FPO Multi-Acreage Cooperative benefits</span>
               
               <div className="space-y-3.5 text-xs">
@@ -280,10 +280,10 @@ export default function Community({ isDarkMode, onPageChange }: CommunityProps) 
           ].map((item, idx) => (
             <div 
               key={idx}
-              className={`p-6 rounded-xl border text-left flex flex-col justify-between ${
+              className={`p-6 rounded-xl border text-left flex flex-col justify-between backdrop-blur-md ${
                 isDarkMode 
-                  ? "bg-slate-905 bg-slate-900/50 border-slate-850" 
-                  : "bg-white border-slate-200/85"
+                  ? "bg-slate-900/40 border-slate-800/60" 
+                  : "bg-white/40 border-slate-200/50"
               }`}
             >
               <div className="space-y-3">

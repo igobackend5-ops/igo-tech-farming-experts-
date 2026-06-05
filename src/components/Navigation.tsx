@@ -51,8 +51,8 @@ export default function Navigation({
   return (
     <header className={`sticky top-0 z-40 transition-all border-b md:py-1 ${
       isDarkMode 
-        ? "bg-[#0f172a]/75 border-slate-800/80 text-[#f8fafc] backdrop-blur-md" 
-        : "bg-white/85 border-slate-200/80 text-slate-800 backdrop-blur-md shadow-sm"
+        ? "bg-[#0f172a]/50 border-slate-800/50 text-[#f8fafc] backdrop-blur-xl" 
+        : "bg-white/50 border-slate-200/50 text-slate-800 backdrop-blur-xl shadow-sm"
     }`} id="main-navigation-header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18">
@@ -210,8 +210,8 @@ export default function Navigation({
 
       {/* Mobile Menu Panel */}
       {isMobileMenuOpen && (
-        <div className={`lg:hidden border-t px-4 py-4 space-y-3 shadow-xl ${
-          isDarkMode ? "bg-slate-950 border-slate-900" : "bg-white border-slate-200"
+        <div className={`lg:hidden border-t px-4 py-4 space-y-3 shadow-xl backdrop-blur-xl ${
+          isDarkMode ? "bg-slate-950/60 border-slate-900/60" : "bg-white/60 border-slate-200/50"
         }`} id="mobile-navigation-panel">
           <div className="space-y-1">
             {navItems.map((item) => (

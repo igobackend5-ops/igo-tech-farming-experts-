@@ -56,7 +56,7 @@ export default function Contact({ isDarkMode }: ContactProps) {
   };
 
   return (
-    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-800"}`} id="contact-page-wrap">
+    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "text-slate-100" : "text-slate-800"}`} id="contact-page-wrap">
       
       {/* 1. HEADER */}
       <section className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-4">
@@ -76,8 +76,8 @@ export default function Contact({ isDarkMode }: ContactProps) {
         <div className="grid lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Left contact card form */}
-          <div className={`lg:col-span-7 p-6 sm:p-8 rounded-2xl border text-left ${
-            isDarkMode ? "bg-slate-900 border-slate-850" : "bg-white border-slate-200 shadow-xl"
+          <div className={`lg:col-span-7 p-6 sm:p-8 rounded-2xl border text-left backdrop-blur-md ${
+            isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50 shadow-xl"
           }`}>
             {formSubmitted ? (
               <div className="py-12 text-center space-y-4 animate-fadeIn">
@@ -232,8 +232,8 @@ export default function Contact({ isDarkMode }: ContactProps) {
           <div className="lg:col-span-5 flex flex-col justify-between gap-6 self-stretch">
             
             {/* Quick dial box */}
-            <div className={`p-6 rounded-2xl border text-left flex-1 space-y-4 ${
-              isDarkMode ? "bg-slate-900 border-slate-850" : "bg-white border-slate-200"
+            <div className={`p-6 rounded-2xl border text-left flex-1 space-y-4 backdrop-blur-md ${
+              isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50"
             }`}>
               <span className="text-[10px] text-emerald-500 uppercase font-extrabold tracking-widest block">Direct Assistance Bureau</span>
               <h3 className="font-extrabold text-base text-white" style={{ color: !isDarkMode ? "#0F172A" : "white" }}>Contact Headquarters Office</h3>
@@ -274,8 +274,8 @@ export default function Contact({ isDarkMode }: ContactProps) {
             </div>
 
             {/* Simulated Live Support status */}
-            <div className={`p-4 rounded-xl border text-xs text-left text-slate-300 leading-normal flex gap-3 ${
-              isDarkMode ? "bg-slate-900/40 border-slate-850" : "bg-slate-100 border-slate-200"
+            <div className={`p-4 rounded-xl border text-xs text-left text-slate-300 leading-normal flex gap-3 backdrop-blur-sm ${
+              isDarkMode ? "bg-slate-900/30 border-slate-800/60" : "bg-white/40 border-slate-200/50"
             }`}>
               <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse mt-1 flex-shrink-0" />
               <div>

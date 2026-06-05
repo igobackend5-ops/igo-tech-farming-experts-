@@ -113,7 +113,7 @@ export default function Blog({ isDarkMode }: BlogProps) {
   const featuredPost = blogPosts.find(p => p.featured) || blogPosts[0];
 
   return (
-    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "bg-slate-950 text-slate-100" : "bg-slate-50 text-slate-800"}`} id="blog-page-wrap">
+    <div className={`space-y-20 pb-20 font-sans ${isDarkMode ? "text-slate-100" : "text-slate-800"}`} id="blog-page-wrap">
       
       {/* 1. HEADER */}
       <section className="text-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 space-y-4">
@@ -173,8 +173,8 @@ export default function Blog({ isDarkMode }: BlogProps) {
             {filteredPosts.map((post) => (
               <article 
                 key={post.id}
-                className={`p-6 rounded-2xl border text-left flex flex-col justify-between hover:border-emerald-500/40 transition-all ${
-                  isDarkMode ? "bg-slate-900/50 border-slate-850" : "bg-white border-slate-200 shadow-sm"
+                className={`p-6 rounded-2xl border text-left flex flex-col justify-between hover:border-emerald-500/40 transition-all backdrop-blur-md ${
+                  isDarkMode ? "bg-slate-900/40 border-slate-800/60" : "bg-white/40 border-slate-200/50 shadow-sm"
                 }`}
               >
                 <div className="space-y-4">
