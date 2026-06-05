@@ -498,58 +498,17 @@ export default function SovereignEcosystem({ isDarkMode, onPageChange }: Soverei
           : "bg-[#FCFBF7] border-slate-200/80 text-[#0f172a]"
       }`} 
       id="sovereign-ecosystem-display-root"
-      style={{ marginLeft: "calc(50% - 50vw)", width: "100vw" }}
+      style={{
+        marginLeft: "calc(50% - 50vw)",
+        width: "100vw",
+        backgroundImage: isDarkMode
+          ? "linear-gradient(rgba(9, 13, 22, 0.72), rgba(9, 13, 22, 0.82)), url('/images/1.jpg')"
+          : "linear-gradient(rgba(252, 251, 247, 0.78), rgba(252, 251, 247, 0.88)), url('/images/1.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
     >
-      
-      {/* 1. HIGH FIDELITY BRAND GRAPHICS BACKGROUND WATERMARKS MATCHING SCREENSHOT */}
-      <div className={`absolute inset-0 w-full h-full pointer-events-none select-none z-0 flex items-center justify-center overflow-hidden transition-opacity ${
-        isDarkMode ? "opacity-[0.2]" : "opacity-[0.3]"
-      }`}>
-        <div className="relative w-full max-w-5xl flex items-center justify-center h-full pt-16">
-          
-          {/* India Map Graphic (Golden Fill) */}
-          <div className="absolute left-[20%] sm:left-[30%] top-1/2 -translate-y-1/2 w-[350px] sm:w-[450px] opacity-80 mix-blend-multiply dark:mix-blend-screen">
-            <svg viewBox="0 0 120 120" className="w-full h-full drop-shadow-lg">
-              <defs>
-                <linearGradient id="indiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#fef3c7" />
-                  <stop offset="50%" stopColor="#fcd34d" />
-                  <stop offset="100%" stopColor="#d97706" />
-                </linearGradient>
-              </defs>
-              <path 
-                d="M45,15 Q49,12 50,15 T52,19 T56,22 T55,26 T53,30 T51,33 T54,34 T57,36 T58,40 T54,43 T53,48 T50,51 T48,56 T49,60 T48,64 T42,65 T38,62 T37,58 T38,53 T36,50 T39,45 T41,40 T38,36 T37,30 T39,26 T42,20 Z" 
-                fill="url(#indiaGrad)" 
-                className="opacity-90"
-              />
-              <path 
-                d="M50,51 T55,54 T59,57 T62,60 T64,64 T65,68 T63,72 T59,75 T54,78 T51,82 T50,86 T48,89 T46,92 T45,95 L44,97 L43,95 T42,91 T41,86 T42,80 T40,75 T42,70 T44,65 T45,61 Z" 
-                fill="url(#indiaGrad)" 
-                className="opacity-70"
-              />
-            </svg>
-          </div>
-
-          {/* Large Typography Watermark */}
-          <div className="relative z-10 flex flex-col items-center justify-center text-center mix-blend-multiply dark:mix-blend-screen -mt-20">
-            <div className="text-[120px] sm:text-[180px] leading-[0.8] font-black text-slate-300/50 dark:text-slate-700/50 tracking-tighter uppercase font-sans">
-              IGO
-            </div>
-            <div className="relative">
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] sm:text-[12px] font-black tracking-[0.4em] text-slate-400 uppercase whitespace-nowrap z-20">
-                INDIA GREEN ORGANICS
-              </div>
-              <div className="text-[70px] sm:text-[110px] leading-[0.8] font-black text-slate-300/50 dark:text-slate-700/50 tracking-tighter uppercase font-sans">
-                GROUP
-              </div>
-              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[8px] sm:text-[10px] font-black tracking-[0.3em] text-slate-400 uppercase whitespace-nowrap z-20">
-                India's Leading Farming Conglomerate
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
 
       <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 text-center">
         
